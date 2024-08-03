@@ -15,11 +15,11 @@
 - Week 2 (7/13, 7/14)
   - Part 1 (7/13) [[Lecture]](./1%20-%20Lecture/240713%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%201.pdf) [[Example]](./2%20-%20Example/240713%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%201/)
     - References
-  - Part 2 (7/14) [[Lecture]](./1%20-%20Lecture/240714%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%202.pdf) [[Assignment]](./3%20-%20Assignment/240714%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%202/)
+  - Part 2 (7/14) [[Lecture]](./1%20-%20Lecture/240714%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%202.pdf) [[Assignment]](./3%20-%20Assignment/240714%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%202/) [[Solution]](./4%20-%20Solution/240714%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%202,%20Day%202/)
     - Expressions
     - Assignment #1
 - Week 3 (7/20, 7/21)
-  - Part 1 (7/20)
+  - Part 1 (7/20) [[Lecture]](./1%20-%20Lecture/240720%20-%20Rust%20Basic%20+%20Linux%20Kernel,%20Week%203,%20Day%201.pdf)
     - Error Handling
   - Part 2 (7/21)
     - Crates and Modules
