@@ -1,5 +1,43 @@
 pub fn annotate(minefield: &[&str]) -> Vec<String> {
-    unimplemented!("\nAnnotate each square of the given minefield with the number of mines that surround said square (blank if there are no surrounding mines):\n{:#?}\n", minefield);
+    let mut annotated_minefield: Vec<String> = Vec::new();
+    let x_length = if minefield.is_empty() { 0 } else { minefield[0].len() };
+    let y_length = minefield.len();
+
+    for _ in 0..y_length {
+        annotated_minefield.push(' '.to_string().repeat(x_length));
+    }
+
+    for y in 0..y_length {
+        for x in 0..x_length {
+            match minefield[y].chars().nth(x).unwrap() {
+                '*' => {
+                    annotated_minefield[y].replace_range(x..x + 1, "*");
+                },
+                _ => {
+                    let mut count = 0;
+
+                    for dy in -1..=1 {
+                        for dx in -1..=1 {
+                            let new_y = y as isize + dy;
+                            let new_x = x as isize + dx;
+
+                            if new_y >= 0 && new_y < y_length as isize && new_x >= 0 && new_x < x_length as isize {
+                                if minefield[new_y as usize].chars().nth(new_x as usize).unwrap() == '*' {
+                                    count += 1;
+                                }
+                            }
+                        }
+                    }
+
+                    if count > 0 {
+                        annotated_minefield[y].replace_range(x..x+1, &count.to_string());
+                    }
+                }
+            }
+        }
+    }
+    
+    return annotated_minefield;
 }
 
 #[cfg(test)]

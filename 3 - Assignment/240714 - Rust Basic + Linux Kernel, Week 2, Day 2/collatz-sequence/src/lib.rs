@@ -1,6 +1,18 @@
 /// Determine the length of the collatz sequence beginning at `n`.
 pub fn collatz_length(mut n: i32) -> u32 {
-    todo!("Implement this")
+    let length = 1;
+
+    if n == 1 {
+        length
+    }
+    else if n % 2 == 0 {
+        n = n / 2;
+        length + collatz_length(n)
+    }
+    else {
+        n = n * 3 + 1;
+        length + collatz_length(n)
+    }
 }
 
 #[cfg(test)]
